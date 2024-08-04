@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root{ /*VARIABLES CSS*/
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+
+* { /*cambio universal*/
+    padding: 0;
+    margin: 0;
+}
+
+body { /*etiqueta de html> cambio de estilo de una parte del contenido del html*/
+    /*height: 100vh;*/ /*height> se utiliza para que el elemento body ocupe toda la pantalla*/
+    box-sizing: border-box; /* ajustar el elemento hijo definido como "border-box" al elemento padre "content-box"*/
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{ /*ENCABEZADO*/
+    padding: 2% 0% 0% 15%;
+} 
+
+.header_menu{ /*ENCABEZADO*/
+    display: flex;
+    gap: 80px;
+
+}
+
+.header_menu_link{  /*ENCABEZADO*/
+    font-size: 1.5rem; /*cambio del tamaño de la fuente de texto*/
+    font-family: var(--fuente-montserrat); /*tipo de letra*/
+    font-weight: 600; /*grosor de la letra*/
+    color: var(--color-terciario); /*color de la letra*/
+    text-decoration: none;
+
+}
+
+
+.presentacion { /*clase > distribuyendo los elementos del la aprte <main>*/
+    padding: 5% 15%; /* espacio entre cada elemento*/
+    display: flex; /*se utiliza para colocar los elementos de forma horizontal o vertical*/
+    align-items: center; /*utilizado para centrar los elementos en el centro de la pantalla*/
+    justify-content: space-between; /*define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
+    gap: 82px;
+}
+
+.presentacion_contenido {
+    width: 50%; /*ajuste del ancho de la seccion*/
+    display: flex; /*coloca los elementos de forma horizontal*/
+    flex-direction: column; /*acomoda de forma en columna*/
+    gap: 40px; /*separacion de cada seccion de forma vertical*/
+}
+
+.presentacion_contenido_titulo {
+    font-size: 2.25rem; /*cambio del tamaño de la fuente de texto*/
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque { /*clase> aplicando estilos a un elemento de html*/
+    color: var(--color-terciario);
+    
+}
+
+
+.presentacion_contenido_texto {
+    font-size: 1.5rem; /*cambio del tamaño de la fuente de texto*/
+    font-family: var(--fuente-montserrat);
+}
+
+
+
+.presentacion_enlaces {
+    display: flex; /*orden los elementos de forma horizontal*/
+    /*justify-content: space-between;*/
+    flex-direction: column; /*reordena los elementos a forma vetical*/
+    align-items: center; /*alinear los elementos en columna de forma central*/
+    gap: 32px; /*separacion entre cada elemento vertical*/
+}
+
+.presentacion_links_subtitulo {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion_links {
+    width: 50%; /*largo del borde de los botones*/
+    border: 2px solid var(--color-terciario); /*tamaño y color de la letra*/
+    text-align: center;
+    padding: 21.5px 0; /*espacio entre el texto o contenido y el borde*/
+    border-radius: 8px; /*se da al borde un radio*/
+    font-family: var(--fuente-montserrat); /*estilo de letra*/
+    font-size: 1.5rem; /*tamaño de la letra*/
+    font-weight: 500; /*negrita de la letra*/
+    text-decoration: none;
+    color: var(--color-secundario); /*color del texto*/
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+}
+
+.presentacion_links:hover {
+        background-color: #272727;
+
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+
+footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat); /*estilo de letra*/
+    font-size: 1.5rem; /*tamaño de la letra*/
+    font-weight: 500;
+
+}
+
+@media (max-width:1200px){
+    .header{
+        padding: 10%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+
+    .presentacion{
+        flex-direction: column-reverse;
+    }
+
+    .presentacion_contenido{
+        width: auto;
+    }
+
+}
